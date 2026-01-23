@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdint.h>
+#include <stdbool.h>
 
 #include "roll.h"
 #include "score.h"
@@ -41,9 +42,23 @@ enum scoring_category get_category_input() {
 }
 
 void print_mask_binary(uint8_t mask) {
-    for (int i = 4; i >= 0; --i) {   
+    for (int i = 0; i < 5; i++) {   
         printf("%u", (mask >> i) & 1);
     }
+}
+
+bool is_game_over(int score_card[13]) {
+  for (int i = 0; i < 13; i++) {
+    if (score_card[i] == -1) {
+      return false;
+    }
+  }
+  return true;
+}
+
+void print_dice(int dice_combo[5]) {
+  for (int i = 0; i < 5; i++) printf("%d", dice_combo[i]);
+  printf("\n");
 }
 
 int main() {
@@ -51,20 +66,22 @@ int main() {
   enum scoring_category cat;
   int card[] = {-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1}; 
 
-  print_card(card);
-  int mask[5] = {1, 1, 1, 1, 1};
-  roll(dice_combo, mask);
+  while (!is_game_over(card)) {
+    int mask[5] = {1, 1, 1, 1, 1};
+    roll(dice_combo, mask);
+    print_dice(dice_combo);
 
-  for (int i = 0; i < 5; i++) printf("%d", dice_combo[i]);
+    for (int num_rolls = 2; num_rolls > 0; num_rolls--) {
+      uint8_t best_mask = get_best_mask(dice_combo, card, num_rolls);
+      print_mask_binary(best_mask);
+      printf("\n");
+      bit_roll(dice_combo, best_mask);
+      print_dice(dice_combo);
+    }
+    
+    cat = get_best_move(dice_combo, card).cat;
+    update_score_card(card, dice_combo, cat);
 
-  uint8_t best_mask = get_best_mask(dice_combo, card);
-  printf("\n");
-  print_mask_binary(best_mask);
-  printf("\n");
-  bit_roll(dice_combo, best_mask);
-
-  cat = get_category_input();
-  update_score_card(card, dice_combo, cat);
-
-  print_card(card);
+    print_card(card);
+  }
 }

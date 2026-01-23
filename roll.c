@@ -16,7 +16,6 @@ void roll(int dice_combo[5], int positions[5]) {
 void bit_roll(int dice_combo[5], uint8_t mask) {
     for (int i = 0; i < 5; ++i) {
         if (mask & (1 << i)) {
-            printf("Rolling die %d\n", i);
             dice_combo[i] = (rand() % 6) + 1;
         }
     }

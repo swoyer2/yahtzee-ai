@@ -23,7 +23,7 @@ bool is_straight(int dice_combo[5], int straight_size) {
       in_a_row += 1;
     else
       in_a_row = 0;
-    if (in_a_row == 4) return true;
+    if (in_a_row == straight_size) return true;
   }
   return false;
 }

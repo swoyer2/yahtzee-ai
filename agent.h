@@ -46,9 +46,15 @@ static const uint8_t BITCOUNT[32] = {
     1,2,2,3,2,3,3,4,2,3,3,4,3,4,4,5
 };
   
-uint8_t get_best_mask(int dice_combo[5], int card[13]); 
+struct Move {
+  int cat;
+  int score;
+};
+
+uint8_t get_best_mask(int dice_combo[5], int card[13], int rolls_left); 
 static inline int ipow(int base, int exp); 
-double ev_for_mask(int dice_combo[5], uint8_t mask, int card[13]); 
-int score_best_cat(int dice_combo[5], int card[13]);
+double ev_for_mask(int dice_combo[5], uint8_t mask, int card[13], int rolls_left); 
+struct Move get_best_move(int dice_combo[5], int card[13]);
+double get_best_ev(int dice_combo[5], int card[13], int rolls_left);
 
 #endif
