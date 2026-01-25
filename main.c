@@ -71,7 +71,7 @@ int main() {
     roll(dice_combo, mask);
     print_dice(dice_combo);
 
-    for (int num_rolls = 2; num_rolls > 0; num_rolls--) {
+    for (int num_rolls = 1; num_rolls > 0; num_rolls--) {
       uint8_t best_mask = get_best_mask(dice_combo, card, num_rolls);
       print_mask_binary(best_mask);
       printf("\n");
