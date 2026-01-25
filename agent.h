@@ -13,104 +13,104 @@
 
 static const uint8_t REROLL_MASKS_YAHTZEE[NUM_REROLL_MASKS_YAHTZEE] = {
     0b00000,
-    0b00001,
-    0b00011,
-    0b00111,
-    0b01111,
+    0b10000,
+    0b11000,
+    0b11100,
+    0b11110,
     0b11111
 };
 
 static const uint8_t REROLL_MASKS_QUADS[NUM_REROLL_MASKS_QUADS] = {
     0b00000,
-    0b00001,
-    0b00011,
-    0b00111,
-    0b01111,
     0b10000,
+    0b11000,
+    0b11100,
+    0b11110,
+    0b00001,
     0b10001,
-    0b10011,
-    0b10111,
+    0b11001,
+    0b11101,
     0b11111
 };
 
 static const uint8_t REROLL_MASKS_FULL_HOUSE[NUM_REROLL_MASKS_FULL_HOUSE] = {
     0b00000,
-    0b00001,
-    0b00011,
-    0b00111,
-    0b01000,
-    0b01001,
-    0b01011,
-    0b01111,
+    0b10000,
     0b11000,
-    0b11001,
+    0b11100,
+    0b00010,
+    0b10010,
+    0b11010,
+    0b11110,
+    0b00011,
+    0b10011,
     0b11011,
     0b11111
 };
 
 static const uint8_t REROLL_MASKS_TRIPS[NUM_REROLL_MASKS_TRIPS] = {
     0b00000,
-    0b00001,
-    0b00011,
-    0b00111,
-    0b01000,
-    0b01001,
-    0b01011,
-    0b01111,
     0b10000,
-    0b10001,
-    0b10011,
-    0b10111,
     0b11000,
+    0b11100,
+    0b00010,
+    0b10010,
+    0b11010,
+    0b11110,
+    0b00001,
+    0b10001,
     0b11001,
+    0b11101,
+    0b00011,
+    0b10011,
     0b11011,
     0b11111
 };
 
 static const uint8_t REROLL_MASKS_TWO_PAIR[NUM_REROLL_MASKS_TWO_PAIR] = {
     0b00000,
-    0b00001,
-    0b00011,
-    0b00100,
-    0b00101,
-    0b00111,
-    0b01100,
-    0b01101,
-    0b01111,
     0b10000,
-    0b10001,
-    0b10011,
+    0b11000,
+    0b00100,
     0b10100,
-    0b10101,
-    0b10111,
     0b11100,
+    0b00110,
+    0b10110,
+    0b11110,
+    0b00001,
+    0b10001,
+    0b11001,
+    0b00101,
+    0b10101,
     0b11101,
+    0b00111,
+    0b10111,
     0b11111
 };
 static const uint8_t REROLL_MASKS_PAIR[NUM_REROLL_MASKS_PAIR] = {
     0b00000,
-    0b00001,
-    0b00011,
-    0b00100,
-    0b00101,
-    0b00111,
-    0b01000,
-    0b01001,
-    0b01011,
-    0b01100,
-    0b01101,
-    0b01111,
     0b10000,
-    0b10001,
-    0b10011,
-    0b10100,
-    0b10101,
-    0b10111,
     0b11000,
-    0b11001,
-    0b11011,
+    0b00100,
+    0b10100,
     0b11100,
+    0b00010,
+    0b10010,
+    0b11010,
+    0b00110,
+    0b10110,
+    0b11110,
+    0b00001,
+    0b10001,
+    0b11001,
+    0b00101,
+    0b10101,
     0b11101,
+    0b00011,
+    0b10011,
+    0b11011,
+    0b00111,
+    0b10111,
     0b11111
 };
  
@@ -163,7 +163,7 @@ struct Move {
 uint8_t get_best_mask(int dice_combo[5], int card[13], int rolls_left); 
 static inline int ipow(int base, int exp); 
 double ev_for_mask(int ordered_dice_combo[5], uint8_t mask, int card[13], int rolls_left); 
-struct Move get_best_move(int dice_combo[5], int card[13]);
+struct Move get_best_move(int ordered_dice_combo[5], int card[13]);
 double get_best_ev(int ordered_dice_combo[5], int card[13], int rolls_left);
 int get_combo_type(int ordered_dice_combo[5]);
 void reorder_dice_combo(int dice_combo[5], int ordered_dice_combo[5]); 

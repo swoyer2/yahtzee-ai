@@ -7,6 +7,5 @@
 int dice_roll();
 void roll(int dice_combo[5], int positions[5]);
 void bit_roll(int dice_combo[5], uint8_t mask);
-void set_roll(int dice_combo[5], int nums_to_roll[5]); 
 
 #endif

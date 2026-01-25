@@ -44,7 +44,7 @@ double ev_for_mask(int ordered_dice_combo[5], uint8_t mask, int card[13], int ro
     memcpy(outcome, ordered_dice_combo, 5 * sizeof(int));
 
     int temp = i;
-    for (int d = 0; d < 5; d++) {
+    for (int d = 4; d >= 0; d--) {
       if (mask & (1 << d)) {
         outcome[d] = (temp % 6) + 1;
         temp /= 6;
@@ -81,10 +81,7 @@ int get_combo_type(int ordered_dice_combo[5]) {
   return 0;
 }
 
-uint8_t get_best_mask(int dice_combo[5], int card[13], int rolls_left) {
-  int ordered_dice_combo[5];
-  reorder_dice_combo(dice_combo, ordered_dice_combo);
-
+uint8_t get_best_mask(int ordered_dice_combo[5], int card[13], int rolls_left) {
   int combo_type = get_combo_type(ordered_dice_combo);
   const uint8_t *mask_group = REROLL_MASKS;
   int num_masks = NUM_REROLL_MASKS;

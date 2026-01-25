@@ -42,7 +42,7 @@ enum scoring_category get_category_input() {
 }
 
 void print_mask_binary(uint8_t mask) {
-    for (int i = 0; i < 5; i++) {   
+    for (int i = 0; i < 5; i++){   
         printf("%u", (mask >> i) & 1);
     }
 }
@@ -69,18 +69,29 @@ int main() {
   while (!is_game_over(card)) {
     int mask[5] = {1, 1, 1, 1, 1};
     roll(dice_combo, mask);
-    print_dice(dice_combo);
 
-    for (int num_rolls = 1; num_rolls > 0; num_rolls--) {
-      uint8_t best_mask = get_best_mask(dice_combo, card, num_rolls);
-      print_mask_binary(best_mask);
-      printf("\n");
-      bit_roll(dice_combo, best_mask);
-      print_dice(dice_combo);
-    }
+    // First Roll
+    int sorted_dice[5];
+    reorder_dice_combo(dice_combo, sorted_dice);
+    print_dice(sorted_dice);
+    uint8_t best_mask = get_best_mask(sorted_dice, card, 2);
+    print_mask_binary(best_mask);
+    printf("\n");
+    bit_roll(sorted_dice, best_mask);
+
+    // Second Roll
+    int sorted_dice_2[5];
+    reorder_dice_combo(sorted_dice, sorted_dice_2);
+    print_dice(sorted_dice_2);
+    uint8_t best_mask_2 = get_best_mask(sorted_dice_2, card, 1);
+    print_mask_binary(best_mask_2);
+    printf("\n");
+    bit_roll(sorted_dice_2, best_mask_2);
+    print_dice(sorted_dice_2);
     
-    cat = get_best_move(dice_combo, card).cat;
-    update_score_card(card, dice_combo, cat);
+    // Choosing cat
+    cat = get_best_move(sorted_dice_2, card).cat;
+    update_score_card(card, sorted_dice_2, cat);
 
     print_card(card);
   }

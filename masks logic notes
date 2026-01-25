@@ -57,3 +57,5 @@ trips   -> None
 2 pair  -> Numbers with no 2's in their base 4 expansion
 1 pair  -> Nonnegative integers not congrueent to 2 mod 4
 singles -> 0...31
+
+Because of the way the rolling function works I revered all the masks
