@@ -2,6 +2,7 @@
 #define AGENT_H
 
 #include <stdint.h>
+#include <stdlib.h>
 
 #define NUM_REROLL_MASKS 32
 #define NUM_REROLL_MASKS_PAIR 24
@@ -10,6 +11,10 @@
 #define NUM_REROLL_MASKS_FULL_HOUSE 12
 #define NUM_REROLL_MASKS_QUADS 10
 #define NUM_REROLL_MASKS_YAHTZEE 6
+
+#define NUM_DICE_STATES 252
+#define NUM_CARD_STATES 8192
+#define NUM_ROLLS 3
 
 static const uint8_t REROLL_MASKS_YAHTZEE[NUM_REROLL_MASKS_YAHTZEE] = {
     0b00000,
@@ -154,18 +159,44 @@ static const uint8_t BITCOUNT[32] = {
     0,1,1,2,1,2,2,3,1,2,2,3,2,3,3,4,
     1,2,2,3,2,3,3,4,2,3,3,4,3,4,4,5
 };
-  
+
+// --- Types ---
+
+typedef struct {
+    const uint8_t *masks;
+    int count;
+} MaskGroup;
+
+typedef uint16_t CardMask;
+
+typedef struct {
+    uint8_t c[6];
+} DiceState;
+
 struct Move {
-  int cat;
-  int score;
+    int cat;
+    int score;
 };
 
-uint8_t get_best_mask(int dice_combo[5], int card[13], int rolls_left); 
-static inline int ipow(int base, int exp); 
-double ev_for_mask(int ordered_dice_combo[5], uint8_t mask, int card[13], int rolls_left); 
-struct Move get_best_move(int ordered_dice_combo[5], int card[13]);
-double get_best_ev(int ordered_dice_combo[5], int card[13], int rolls_left);
-int get_combo_type(int ordered_dice_combo[5]);
-void reorder_dice_combo(int dice_combo[5], int ordered_dice_combo[5]); 
+// --- Functions ---
 
-#endif
+void init_dice_states(void);
+void init_memo(void);
+
+double get_best_ev(int ordered_dice_combo[5], int card[13], int rolls_left);
+uint8_t get_best_mask(int dice_combo[5], int card[13], int rolls_left);
+struct Move get_best_move(int ordered_dice_combo[5], int card[13]);
+CardMask card_to_mask(const int card[13]);
+int card_used(CardMask card, int i);
+CardMask card_mark(CardMask card, int i);
+void reorder_dice_combo(int dice_combo[5], int ordered_dice_combo[5]);
+double ev_for_mask(int ordered_dice_combo[5], uint8_t mask, int card[13], int rolls_left);
+int bonus_heuristic(int card[13]);
+
+int dice_state_id(DiceState s);
+DiceState dice_to_state(int dice[5]);
+CardMask card_to_mask(const int card[13]);
+int card_used(CardMask card, int i);
+CardMask card_mark(CardMask card, int i);
+
+#endif // AGENT_H

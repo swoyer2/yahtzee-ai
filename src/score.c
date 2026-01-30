@@ -107,7 +107,7 @@ int tally_score(int card[13]) {
     if (card[i] != -1) {
       final_score += card[i];
     }
-    if (i == 5 && final_score == 63) {
+    if (i == 5 && final_score >= 63) {
       final_score += 35;
     }
   }

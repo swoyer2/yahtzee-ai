@@ -1,0 +1,287 @@
+2 3 3 6 6 
+11100
+1 1 6 6 6 
+11000
+5 6 6 6 6 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: -1
+4 -> Fives: -1
+5 -> Sixes: -1
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: -1
+10 -> Lg Straight: -1
+11 -> Chance: -1
+12 -> Yahtzee: -1
+
+Total Score: 29
+1 3 5 4 4 
+10001
+1 3 4 5 6 
+10000
+4 3 4 5 6 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: -1
+4 -> Fives: -1
+5 -> Sixes: -1
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: -1
+12 -> Yahtzee: -1
+
+Total Score: 59
+1 5 5 6 6 
+10000
+1 5 5 6 6 
+10000
+3 5 5 6 6 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: -1
+4 -> Fives: -1
+5 -> Sixes: -1
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 84
+2 3 6 1 1 
+11011
+1 2 4 5 6 
+10000
+6 2 4 5 6 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: -1
+4 -> Fives: -1
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 96
+4 5 6 1 1 
+00111
+1 4 5 3 3 
+00001
+1 4 5 3 4 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: 8
+4 -> Fives: -1
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 104
+5 1 1 2 2 
+10000
+6 1 1 2 2 
+10000
+6 1 1 2 2 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: -1
+3 -> Fours: 8
+4 -> Fives: -1
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 108
+1 4 5 3 3 
+00001
+1 4 5 3 3 
+00001
+1 4 5 3 4 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: -1
+3 -> Fours: 8
+4 -> Fives: 5
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 113
+1 4 5 2 2 
+00001
+2 4 5 1 1 
+00001
+2 4 5 1 3 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: -1
+3 -> Fours: 8
+4 -> Fives: 5
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 153
+3 5 6 4 4 
+11100
+2 3 6 4 4 
+10100
+1 3 1 4 4 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: 3
+3 -> Fours: 8
+4 -> Fives: 5
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 156
+1 2 2 4 4 
+10000
+4 4 2 2 2 
+00000
+4 4 2 2 2 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: 3
+3 -> Fours: 8
+4 -> Fives: 5
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 181
+1 5 6 2 2 
+11100
+2 2 5 5 5 
+11000
+3 5 5 5 5 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: 3
+3 -> Fours: 8
+4 -> Fives: 5
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: 23
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 204
+1 6 2 2 2 
+11000
+6 2 2 2 2 
+10000
+2 2 2 2 2 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: 3
+3 -> Fours: 8
+4 -> Fives: 5
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: 23
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: 50
+
+Total Score: 254
+1 5 6 2 2 
+01111
+1 2 4 6 6 
+01111
+1 5 5 2 2 
+
+0 -> Aces: 1
+1 -> Twos: 4
+2 -> Threes: 3
+3 -> Fours: 8
+4 -> Fives: 5
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 29
+7 -> 4 of a Kind: 23
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: 50
+
+Total Score: 255
+Game Over!

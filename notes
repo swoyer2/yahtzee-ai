@@ -1,0 +1,5 @@
+game state can be represented as (False, False, True...False) with 13 being the number of cats so 2^13 total states
+
+turn state is (roll_number, dice_state)
+
+CREDIT https://github.com/dpmerrell/yahtzee/blob/main/yahtzee/dice.py
