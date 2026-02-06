@@ -95,8 +95,26 @@ int score_combo(int dice_combo[5], enum scoring_category category) {
   }
 }
 
+bool is_yahtzee_bonus(int card[13], int dice_combo[5]) {
+  int dice_counts[6] = {0, 0, 0, 0, 0, 0};
+  get_dice_counts(dice_combo, dice_counts);
+
+  if (card[12] == -1 || card[12] == 0) {
+    return false;
+  }
+  for (int i = 0; i < 6; i++) {
+    if (dice_counts[i] == 5) {
+      return true;
+    }
+  }
+  return false;
+}
+
 void update_score_card(int card[13], int dice_combo[5], enum scoring_category category) {
   int score = score_combo(dice_combo, category);
+  if (is_yahtzee_bonus(card, dice_combo)) {
+    score += 100;
+  }
   card[category] = score; 
 }
 

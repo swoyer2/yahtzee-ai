@@ -206,6 +206,10 @@ struct Move get_best_move(int dice[5], int card[13]) {
 int bonus_heuristic(int card[13]) {
   int points_needed = 63;
   int possible_points_left = 0;
+ 
+  // TEMP FOR GETTING V1 SINCE I CHANGED CODE FOR GAME LOGIC
+  // REMOVE ME!!!!!!!!!!!!
+  return 0;
 
   for (int i = 0; i < 6; i++) {
     if (card[i] != -1) {

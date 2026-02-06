@@ -31,4 +31,5 @@ void update_score_card(
 	int dice_combo[5], 
 	enum scoring_category category);
 int tally_score(int card[13]);
+bool is_yahtzee_bonus(int card[13], int dice_combo[5]);
 #endif
