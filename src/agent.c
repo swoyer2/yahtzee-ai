@@ -180,7 +180,7 @@ double get_best_ev(int dice[5], int card[13], int rolls_left) {
 // --- Best move selection ---
 
 struct Move get_best_move(int dice[5], int card[13]) {
-    int best_score = -1;
+    int best_score = -1000000;
     int best_cat = -1;
     int temp_card[13];
 
@@ -191,6 +191,11 @@ struct Move get_best_move(int dice[5], int card[13]) {
 
             update_score_card(temp_card, dice, i);
             int score = tally_score(temp_card);
+
+            // Uses original card because it is evaluating based on amount of turns played before score
+            if (score > 0) { // Only change score if the category scores (prevents giving points for 0 scoring)
+              score += category_order_heuristic(card, i); 
+            } 
             score += bonus_heuristic(temp_card);
 
             if (score > best_score) {
@@ -207,10 +212,6 @@ int bonus_heuristic(int card[13]) {
   int points_needed = 63;
   int possible_points_left = 0;
  
-  // TEMP FOR GETTING V1 SINCE I CHANGED CODE FOR GAME LOGIC
-  // REMOVE ME!!!!!!!!!!!!
-  return 0;
-
   for (int i = 0; i < 6; i++) {
     if (card[i] != -1) {
       points_needed -= card[i];
@@ -230,6 +231,24 @@ int bonus_heuristic(int card[13]) {
     int feasibility = possible_points_left - points_needed;
     return (int) ( -35.0 + 35.0 * ((double)feasibility / 42.0)); 
   }
+}
+
+int category_order_heuristic(int card[13], int category) {
+  int n_categories_filled = 0;
+  for (int i = 0; i < 13; i++) {
+    if (card[i] != -1) { 
+      n_categories_filled += 1;
+    }
+  }
+
+  if (category == 11) { // Chance category
+    return -floor(25 / (n_categories_filled + 1));
+  }
+  if (category == 10) { // Large straight
+    return floor(25 / (n_categories_filled + 1));
+  }
+
+  return 0;
 }
 
 // --- Memoization table initialization ---

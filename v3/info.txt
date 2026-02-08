@@ -1,0 +1,3 @@
+top bonus heuristic
+heuristic for preventing chance early in game using floor(25/n+1) where n = total turns played so far
+
