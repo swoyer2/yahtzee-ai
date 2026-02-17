@@ -199,5 +199,6 @@ CardMask card_to_mask(const int card[13]);
 int card_used(CardMask card, int i);
 CardMask card_mark(CardMask card, int i);
 int category_order_heuristic(int card[13], int category); 
+int zero_out_heuristic(int card[13], int category); 
 
 #endif // AGENT_H

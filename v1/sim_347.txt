@@ -1,0 +1,287 @@
+6 4 4 5 5 
+00101
+1 4 5 6 6 
+10000
+1 4 5 6 6 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: -1
+4 -> Fives: -1
+5 -> Sixes: -1
+
+6 -> 3 of a Kind: -1
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: -1
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 22
+1 2 2 2 2 
+10000
+1 2 2 2 2 
+10000
+5 2 2 2 2 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: -1
+4 -> Fives: -1
+5 -> Sixes: -1
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: -1
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 35
+6 3 3 4 4 
+10101
+3 4 6 1 1 
+00011
+3 4 6 4 3 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: 8
+4 -> Fives: -1
+5 -> Sixes: -1
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: -1
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 43
+5 1 1 2 2 
+01111
+1 4 6 5 5 
+10001
+5 4 6 5 1 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: -1
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: -1
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 53
+3 4 6 5 5 
+00001
+3 5 6 4 4 
+00001
+3 5 6 4 3 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: -1
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 83
+3 4 6 2 2 
+00001
+2 4 6 3 3 
+00001
+2 4 6 3 1 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: 6
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 89
+1 2 2 5 5 
+10000
+2 2 5 5 5 
+00000
+2 2 5 5 5 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: 6
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 114
+6 6 1 1 1 
+11111
+6 1 1 4 4 
+11111
+1 6 2 3 3 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: 6
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: 6
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 120
+1 2 4 5 6 
+10000
+4 5 6 2 2 
+00001
+4 5 6 2 2 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: 6
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: 6
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 124
+1 2 4 5 6 
+00001
+2 4 5 1 1 
+00001
+2 4 5 1 6 
+
+0 -> Aces: 1
+1 -> Twos: 4
+2 -> Threes: 6
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: 6
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: -1
+
+Total Score: 125
+3 1 1 1 1 
+10000
+1 1 1 1 1 
+00000
+1 1 1 1 1 
+
+0 -> Aces: 1
+1 -> Twos: 4
+2 -> Threes: 6
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: 6
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: 22
+12 -> Yahtzee: 50
+
+Total Score: 175
+3 4 5 2 2 
+00001
+2 3 4 5 6 
+00000
+2 3 4 5 6 
+
+0 -> Aces: 1
+1 -> Twos: 4
+2 -> Threes: 6
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: 6
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 22
+12 -> Yahtzee: 50
+
+Total Score: 215
+1 3 6 5 5 
+11100
+1 2 2 5 5 
+11100
+2 4 6 5 5 
+
+0 -> Aces: 1
+1 -> Twos: 4
+2 -> Threes: 6
+3 -> Fours: 8
+4 -> Fives: 10
+5 -> Sixes: 6
+
+6 -> 3 of a Kind: 13
+7 -> 4 of a Kind: 0
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 22
+12 -> Yahtzee: 50
+
+Total Score: 215
+Game Over!

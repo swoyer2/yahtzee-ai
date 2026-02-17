@@ -1,5 +1,27 @@
-3 5 2 2 2 
-00011
+3 4 1 1 1 
+00111
+1 2 4 3 3 
+00001
+1 2 4 3 3 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: -1
+4 -> Fives: -1
+5 -> Sixes: -1
+
+6 -> 3 of a Kind: -1
+7 -> 4 of a Kind: -1
+8 -> Full House: -1
+9 -> Sm Straight: 30
+10 -> Lg Straight: -1
+11 -> Chance: -1
+12 -> Yahtzee: -1
+
+Total Score: 30
+1 4 6 3 3 
+10001
 2 3 4 5 6 
 00000
 2 3 4 5 6 
@@ -14,17 +36,17 @@
 6 -> 3 of a Kind: -1
 7 -> 4 of a Kind: -1
 8 -> Full House: -1
-9 -> Sm Straight: -1
+9 -> Sm Straight: 30
 10 -> Lg Straight: 40
 11 -> Chance: -1
 12 -> Yahtzee: -1
 
-Total Score: 40
-3 5 6 2 2 
-00011
-6 3 3 5 5 
-00100
-6 3 3 5 5 
+Total Score: 70
+3 2 2 4 4 
+11100
+2 3 6 4 4 
+11000
+6 5 6 4 4 
 
 0 -> Aces: -1
 1 -> Twos: -1
@@ -36,39 +58,17 @@ Total Score: 40
 6 -> 3 of a Kind: -1
 7 -> 4 of a Kind: -1
 8 -> Full House: -1
-9 -> Sm Straight: -1
+9 -> Sm Straight: 30
 10 -> Lg Straight: 40
-11 -> Chance: 22
+11 -> Chance: 25
 12 -> Yahtzee: -1
 
-Total Score: 62
-1 2 4 5 6 
-11001
-1 5 4 4 4 
-10000
-4 5 4 4 4 
-
-0 -> Aces: -1
-1 -> Twos: -1
-2 -> Threes: -1
-3 -> Fours: -1
-4 -> Fives: -1
-5 -> Sixes: -1
-
-6 -> 3 of a Kind: 21
-7 -> 4 of a Kind: -1
-8 -> Full House: -1
-9 -> Sm Straight: -1
-10 -> Lg Straight: 40
-11 -> Chance: 22
-12 -> Yahtzee: -1
-
-Total Score: 83
-3 4 2 2 2 
-00011
-3 4 5 2 2 
+Total Score: 95
+6 4 4 5 5 
+11100
+6 6 5 5 5 
 00000
-3 4 5 2 2 
+6 6 5 5 5 
 
 0 -> Aces: -1
 1 -> Twos: -1
@@ -77,211 +77,211 @@ Total Score: 83
 4 -> Fives: -1
 5 -> Sixes: -1
 
-6 -> 3 of a Kind: 21
+6 -> 3 of a Kind: 27
 7 -> 4 of a Kind: -1
 8 -> Full House: -1
 9 -> Sm Straight: 30
 10 -> Lg Straight: 40
-11 -> Chance: 22
+11 -> Chance: 25
 12 -> Yahtzee: -1
 
-Total Score: 113
-1 2 2 4 4 
+Total Score: 122
+2 4 6 3 3 
+11011
+1 3 3 6 6 
 10000
-2 2 4 4 4 
-00000
-2 2 4 4 4 
+2 3 3 6 6 
 
 0 -> Aces: -1
 1 -> Twos: -1
 2 -> Threes: -1
 3 -> Fours: -1
 4 -> Fives: -1
-5 -> Sixes: -1
+5 -> Sixes: 12
 
-6 -> 3 of a Kind: 21
+6 -> 3 of a Kind: 27
 7 -> 4 of a Kind: -1
-8 -> Full House: 25
+8 -> Full House: -1
 9 -> Sm Straight: 30
 10 -> Lg Straight: 40
-11 -> Chance: 22
+11 -> Chance: 25
 12 -> Yahtzee: -1
 
-Total Score: 138
-4 3 3 6 6 
+Total Score: 134
+2 4 6 5 5 
 11100
-4 3 3 6 6 
-11100
-4 4 4 6 6 
+1 3 3 5 5 
+10000
+5 3 3 5 5 
 
 0 -> Aces: -1
 1 -> Twos: -1
 2 -> Threes: -1
-3 -> Fours: 12
+3 -> Fours: -1
 4 -> Fives: -1
-5 -> Sixes: -1
+5 -> Sixes: 12
 
-6 -> 3 of a Kind: 21
+6 -> 3 of a Kind: 27
 7 -> 4 of a Kind: -1
 8 -> Full House: 25
 9 -> Sm Straight: 30
 10 -> Lg Straight: 40
-11 -> Chance: 22
+11 -> Chance: 25
 12 -> Yahtzee: -1
 
-Total Score: 150
-4 3 3 5 5 
+Total Score: 159
+1 2 3 6 6 
 11100
-2 3 4 5 5 
-11100
-1 5 4 5 5 
-
-0 -> Aces: -1
-1 -> Twos: -1
-2 -> Threes: -1
-3 -> Fours: 12
-4 -> Fives: 15
-5 -> Sixes: -1
-
-6 -> 3 of a Kind: 21
-7 -> 4 of a Kind: -1
-8 -> Full House: 25
-9 -> Sm Straight: 30
-10 -> Lg Straight: 40
-11 -> Chance: 22
-12 -> Yahtzee: -1
-
-Total Score: 165
-4 1 1 1 1 
-10000
-2 1 1 1 1 
-10000
-6 1 1 1 1 
-
-0 -> Aces: -1
-1 -> Twos: -1
-2 -> Threes: -1
-3 -> Fours: 12
-4 -> Fives: 15
-5 -> Sixes: -1
-
-6 -> 3 of a Kind: 21
-7 -> 4 of a Kind: 10
-8 -> Full House: 25
-9 -> Sm Straight: 30
-10 -> Lg Straight: 40
-11 -> Chance: 22
-12 -> Yahtzee: -1
-
-Total Score: 175
-1 4 6 2 2 
-11011
-1 3 6 5 5 
-11011
-4 3 6 5 2 
-
-0 -> Aces: -1
-1 -> Twos: -1
-2 -> Threes: -1
-3 -> Fours: 12
-4 -> Fives: 15
-5 -> Sixes: -1
-
-6 -> 3 of a Kind: 21
-7 -> 4 of a Kind: 10
-8 -> Full House: 25
-9 -> Sm Straight: 30
-10 -> Lg Straight: 40
-11 -> Chance: 22
-12 -> Yahtzee: 0
-
-Total Score: 175
-1 6 5 5 5 
-10111
-2 4 4 6 6 
-11100
-3 3 2 6 6 
-
-0 -> Aces: -1
-1 -> Twos: -1
-2 -> Threes: 6
-3 -> Fours: 12
-4 -> Fives: 15
-5 -> Sixes: -1
-
-6 -> 3 of a Kind: 21
-7 -> 4 of a Kind: 10
-8 -> Full House: 25
-9 -> Sm Straight: 30
-10 -> Lg Straight: 40
-11 -> Chance: 22
-12 -> Yahtzee: 0
-
-Total Score: 181
-5 6 2 2 2 
-11000
-3 6 2 2 2 
-11000
-6 1 2 2 2 
-
-0 -> Aces: -1
-1 -> Twos: 6
-2 -> Threes: 6
-3 -> Fours: 12
-4 -> Fives: 15
-5 -> Sixes: -1
-
-6 -> 3 of a Kind: 21
-7 -> 4 of a Kind: 10
-8 -> Full House: 25
-9 -> Sm Straight: 30
-10 -> Lg Straight: 40
-11 -> Chance: 22
-12 -> Yahtzee: 0
-
-Total Score: 187
-5 6 2 2 2 
-10111
 1 4 6 6 6 
 11000
-6 4 6 6 6 
+4 3 6 6 6 
 
 0 -> Aces: -1
-1 -> Twos: 6
-2 -> Threes: 6
-3 -> Fours: 12
-4 -> Fives: 15
-5 -> Sixes: 24
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: 4
+4 -> Fives: -1
+5 -> Sixes: 12
 
-6 -> 3 of a Kind: 21
-7 -> 4 of a Kind: 10
+6 -> 3 of a Kind: 27
+7 -> 4 of a Kind: -1
 8 -> Full House: 25
 9 -> Sm Straight: 30
 10 -> Lg Straight: 40
-11 -> Chance: 22
-12 -> Yahtzee: 0
+11 -> Chance: 25
+12 -> Yahtzee: -1
 
-Total Score: 246
-5 3 3 6 6 
-11111
-1 3 4 5 6 
-01111
-1 1 4 4 4 
+Total Score: 163
+1 3 4 5 5 
+11100
+3 4 6 5 5 
+11100
+4 1 4 5 5 
+
+0 -> Aces: -1
+1 -> Twos: -1
+2 -> Threes: -1
+3 -> Fours: 4
+4 -> Fives: 10
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 27
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 173
+1 3 6 5 5 
+11100
+2 6 5 5 5 
+11000
+2 2 5 5 5 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: -1
+3 -> Fours: 4
+4 -> Fives: 10
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 27
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 177
+6 1 1 3 3 
+11100
+2 5 6 3 3 
+11100
+3 2 1 3 3 
+
+0 -> Aces: -1
+1 -> Twos: 4
+2 -> Threes: 9
+3 -> Fours: 4
+4 -> Fives: 10
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 27
+7 -> 4 of a Kind: -1
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 186
+4 4 5 5 5 
+11000
+2 3 5 5 5 
+11000
+1 1 5 5 5 
 
 0 -> Aces: 2
-1 -> Twos: 6
-2 -> Threes: 6
-3 -> Fours: 12
-4 -> Fives: 15
-5 -> Sixes: 24
+1 -> Twos: 4
+2 -> Threes: 9
+3 -> Fours: 4
+4 -> Fives: 10
+5 -> Sixes: 12
 
-6 -> 3 of a Kind: 21
-7 -> 4 of a Kind: 10
+6 -> 3 of a Kind: 27
+7 -> 4 of a Kind: -1
 8 -> Full House: 25
 9 -> Sm Straight: 30
 10 -> Lg Straight: 40
-11 -> Chance: 22
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 188
+4 2 2 3 3 
+11100
+6 2 2 3 3 
+11100
+4 3 1 3 3 
+
+0 -> Aces: 2
+1 -> Twos: 4
+2 -> Threes: 9
+3 -> Fours: 4
+4 -> Fives: 10
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 27
+7 -> 4 of a Kind: 0
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
+12 -> Yahtzee: -1
+
+Total Score: 188
+2 5 6 3 3 
+11100
+5 3 3 3 3 
+10000
+1 3 3 3 3 
+
+0 -> Aces: 2
+1 -> Twos: 4
+2 -> Threes: 9
+3 -> Fours: 4
+4 -> Fives: 10
+5 -> Sixes: 12
+
+6 -> 3 of a Kind: 27
+7 -> 4 of a Kind: 0
+8 -> Full House: 25
+9 -> Sm Straight: 30
+10 -> Lg Straight: 40
+11 -> Chance: 25
 12 -> Yahtzee: 0
 
-Total Score: 248
+Total Score: 188
 Game Over!

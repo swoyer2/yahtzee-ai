@@ -193,10 +193,14 @@ struct Move get_best_move(int dice[5], int card[13]) {
             int score = tally_score(temp_card);
 
             // Uses original card because it is evaluating based on amount of turns played before score
-            if (score > 0) { // Only change score if the category scores (prevents giving points for 0 scoring)
-              score += category_order_heuristic(card, i); 
-            } 
-            score += bonus_heuristic(temp_card);
+            if (temp_card[i] > 0 ) { // Only change score if the category scores (prevents giving points for 0 scoring)
+             // score += category_order_heuristic(card, i); 
+            }
+            else {
+              //score += zero_out_heuristic(card, i); 
+            }
+
+            //score += bonus_heuristic(temp_card);
 
             if (score > best_score) {
                 best_score = score;
@@ -208,29 +212,41 @@ struct Move get_best_move(int dice[5], int card[13]) {
     return (struct Move){ best_cat, best_score };
 }
 
-int bonus_heuristic(int card[13]) {
+int bonus_heuristic_hybrid(int card[13]) {
   int points_needed = 63;
   int possible_points_left = 0;
- 
+  int categories_left = 0;
+  
   for (int i = 0; i < 6; i++) {
     if (card[i] != -1) {
       points_needed -= card[i];
-    }
-    else {
+    } else {
       possible_points_left += (i+1) * 5;
+      categories_left++;
     }
   }
-
+  
   if (points_needed <= 0) {
-    return 0; // already got bonus
+    return 0;
   }
-  else if (points_needed > possible_points_left) {
-    return -35; // Not possible to get bonus
+  
+  if (points_needed > possible_points_left) {
+    return -35;
   }
-  else {
-    int feasibility = possible_points_left - points_needed;
-    return (int) ( -35.0 + 35.0 * ((double)feasibility / 42.0)); 
-  }
+  
+  int margin = possible_points_left - points_needed;
+  
+  // More categories left = more flexibility
+  double category_factor = (double)categories_left / 6.0;
+  
+  // Base ratio from margin
+  double base_ratio = (double)margin / (double)possible_points_left;
+  
+  // Adjust for number of categories (more is better)
+  double adjusted_ratio = base_ratio * (0.5 + 0.5 * category_factor);
+  
+  // Quadratic scaling, but keep minimum penalty of -5
+  return (int)(-35.0 + 30.0 * adjusted_ratio * adjusted_ratio);
 }
 
 int category_order_heuristic(int card[13], int category) {
@@ -249,6 +265,33 @@ int category_order_heuristic(int card[13], int category) {
   }
 
   return 0;
+}
+
+int zero_out_heuristic(int card[13], int category) {
+  // These values are taken from https://www-set.win.tue.nl/~wstomv/misc/yahtzee/trivia.html
+  int EARLIEST_0_TURN[13] = {2, 3, 4, 5, 6, 9, 7, 2, 5, 10, 7, 3, -1}; // Earliest turn to score a 0 per category
+  int EXPECTED_VALS[13] = {2, 5, 9, 12, 16, 19, 22, 13, 23, 29, 33, 17}; // Expected score per category
+  int n_categories_filled = 0;
+  int total_expected_score_left = 0;
+
+  for (int i = 0; i < 13; i++) {
+    if (card[i] != -1) { 
+      n_categories_filled += 1;
+    }
+    else {
+      if (i != category) {
+        total_expected_score_left += EXPECTED_VALS[i];
+      }
+    }
+  }
+  
+  if (EARLIEST_0_TURN[category] > n_categories_filled) {
+    return -100; // Dont 0 out this cat yet
+  }
+  else {
+    // Should ideally give a value for 0ing a category based on expected value of other cats
+    return total_expected_score_left / 2 * ( (n_categories_filled - 1) - EXPECTED_VALS[category] );
+  }
 }
 
 // --- Memoization table initialization ---
